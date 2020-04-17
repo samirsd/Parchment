@@ -164,12 +164,35 @@ public struct PagingOptions {
     selectedFont = UIFont.systemFont(ofSize: 15, weight: UIFontWeightMedium)
     #endif
     
-    textColor = UIColor.black
+    textColor = UIColor.white
     selectedTextColor = UIColor(red: 3/255, green: 125/255, blue: 233/255, alpha: 1)
     backgroundColor = .clear
     selectedBackgroundColor = .clear
-    menuBackgroundColor = UIColor.white
+    menuBackgroundColor = lavender
     borderColor = UIColor(white: 0.9, alpha: 1)
     indicatorColor = UIColor(red: 3/255, green: 125/255, blue: 233/255, alpha: 1)
   }
 }
+
+
+extension UIColor {
+    convenience init(hex: String) {
+        let scanner = Scanner(string: hex)
+        scanner.scanLocation = 0
+        
+        var rgbValue: UInt64 = 0
+        
+        scanner.scanHexInt64(&rgbValue)
+        
+        let r = (rgbValue & 0xff0000) >> 16
+        let g = (rgbValue & 0xff00) >> 8
+        let b = rgbValue & 0xff
+        
+        self.init(
+            red: CGFloat(r) / 0xff,
+            green: CGFloat(g) / 0xff,
+            blue: CGFloat(b) / 0xff, alpha: 1
+        )
+    }
+}
+let lavender = UIColor.init(hex: "6B87F7")
