@@ -157,20 +157,26 @@ public struct PagingOptions {
         insets: UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8))
 
     #if swift(>=4.0)
-    font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium)
-    selectedFont = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium)
+//     font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium)
+    font = AppFont(size: 15)
+    
+    selectedFont = AppFont(size: 15)
+//     selectedFont = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium)
     #else
     font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightMedium)
     selectedFont = UIFont.systemFont(ofSize: 15, weight: UIFontWeightMedium)
     #endif
     
     textColor = UIColor.white
-    selectedTextColor = UIColor(red: 3/255, green: 125/255, blue: 233/255, alpha: 1)
+//     selectedTextColor = UIColor(red: 3/255, green: 125/255, blue: 233/255, alpha: 1)
+    let neonPink =  UIColor(red: 232/255, green: 48/255, blue: 147/255, alpha: 1)
+    selectedTextColor = neonPink
     backgroundColor = .clear
     selectedBackgroundColor = .clear
     menuBackgroundColor = .black
     borderColor = UIColor(white: 0.9, alpha: 1)
-    indicatorColor = UIColor(red: 3/255, green: 125/255, blue: 233/255, alpha: 1)
+//     indicatorColor = UIColor(red: 3/255, green: 125/255, blue: 233/255, alpha: 1)
+    indicatorColor = neonPink
   }
 }
 
