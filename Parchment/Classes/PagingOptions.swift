@@ -158,9 +158,11 @@ public struct PagingOptions {
 
     #if swift(>=4.0)
 //     font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium)
-    font = AppFont(size: 15)
+    let fontName = "IBMPlexMono-SemiBold"
+    let size = 15
+    font = UIFont(name: fontName, size: size)!
     
-    selectedFont = AppFont(size: 15)
+    selectedFont = UIFont(name: fontName, size: size)!
 //     selectedFont = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium)
     #else
     font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightMedium)
