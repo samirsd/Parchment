@@ -179,7 +179,8 @@ public struct PagingOptions {
     backgroundColor = .clear
     selectedBackgroundColor = .clear
     menuBackgroundColor = .black
-    borderColor = UIColor(white: 0.9, alpha: 1)
+//     borderColor = UIColor(white: 0.9, alpha: 1)
+        borderColor =  UIColor(red: 110/255, green: 139/255, blue: 255/255, alpha: 1)
 //     indicatorColor = UIColor(red: 3/255, green: 125/255, blue: 233/255, alpha: 1)
     indicatorColor = neonPink
   }
