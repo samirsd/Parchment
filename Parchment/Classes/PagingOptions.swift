@@ -170,7 +170,9 @@ public struct PagingOptions {
     selectedFont = UIFont.systemFont(ofSize: 15, weight: UIFontWeightMedium)
     #endif
     
-    textColor = UIColor.white
+//     textColor = UIColor.white
+    textColor = UIColor(red: 110/255, green: 139/255, blue: 255/255, alpha: 1)
+//     UIColor(red:110 139 255
 //     selectedTextColor = UIColor(red: 3/255, green: 125/255, blue: 233/255, alpha: 1)
     let neonPink =  UIColor(red: 232/255, green: 48/255, blue: 147/255, alpha: 1)
     selectedTextColor = neonPink
